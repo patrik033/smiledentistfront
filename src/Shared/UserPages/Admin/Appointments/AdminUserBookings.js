@@ -51,7 +51,7 @@ function AdminUserBookings() {
                 headers: { Authorization: `Bearer ${storage}` },
             };
 
-            axios.get(`https://localhost:6001/api/Booking?fields=${valueStart}&some=${valueEnd}`, config)
+            axios.get(`https://localhost:6001/api/Booking?fields=${valueStart}&endValue=${valueEnd}`, config)
                 .then(response => {
                     setOrders(response.data);
                     setSet(true);
@@ -90,7 +90,7 @@ function AdminUserBookings() {
 
     const handleFilterChange = () => {
         if (isStartSet && isEndSet) {
-            console.log("both set");
+            // console.log("both set");
             setBoth(true);
         }
     }
@@ -104,7 +104,7 @@ function AdminUserBookings() {
                         <Container className="me-auto">
                             <LocalizationProvider dateAdapter={AdapterDayjs}>
                                 <Row className="mb-4 mt-4">
-                                    <h1>Start Time:</h1>
+                                    <h1>Start Tid:</h1>
                                     <MobileDatePicker
                                         label="Date mobile"
                                         inputFormat="DD/MM/YYYY"
@@ -114,7 +114,7 @@ function AdminUserBookings() {
                                     />
                                 </Row>
                                 <Row>
-                                    <h1>End Time:</h1>
+                                    <h1>Slut Tid:</h1>
                                     <MobileDatePicker
                                         label="Date mobile"
                                         inputFormat="DD/MM/YYYY"
@@ -127,7 +127,7 @@ function AdminUserBookings() {
                             <Button
                                 className="me-auto mt-2 mb-2"
                                 onClick={handleFilterChange}
-                            >Filter Data</Button>
+                            >Filtrera Data</Button>
                         </Container>
 
 
@@ -135,11 +135,11 @@ function AdminUserBookings() {
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Name</th>
+                                    <th>Namn</th>
                                     <th>Email</th>
-                                    <th>User Id</th>
-                                    <th>Scheduled Time</th>
-                                    <th>Delete Order</th>
+                                    <th>Användar Id</th>
+                                    <th>Bokad Tid</th>
+                                    <th>Ta bort Besök</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -150,7 +150,7 @@ function AdminUserBookings() {
                                         <td>{order.email}</td>
                                         <td>{order.userId}</td>
                                         <td>{order.scheduledTime}</td>
-                                        <td><Button variant="primary" onClick={e => redirectToNewPage(order)}>Delete</Button></td>
+                                        <td><Button variant="primary" onClick={e => redirectToNewPage(order)}>Ta bort</Button></td>
                                     </tr>
                                 )}
                             </tbody>
@@ -169,7 +169,6 @@ function AdminUserBookings() {
         </div>
     )
 }
-
 
 
 export default AdminUserBookings;

@@ -43,7 +43,7 @@ function SingleTreatment(props) {
                 <Cards sx={{ maxWidth: 345 }}>
                     <CardHeader
                         avatar={
-                            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                            <Avatar sx={{ bgcolor: red[700] }} aria-label="recipe">
                                 {props.treatmentname.substr(0, 1)}
                                 {props.treatmentname.substr(1, 1)}
                             </Avatar>

@@ -39,9 +39,9 @@ function AdminNavigation() {
                     <Container>
                         <Nav activeKey={"/"} variant="pills" className="me-auto">
                             <NavLink to="/" ></NavLink>
-                            <Nav.Link className="button text-white" as={Link} to="/">Home</Nav.Link>
-                            <Nav.Link className="button text-white" as={Link} to="/adminbookings">UserBookings</Nav.Link>
-                            <Nav.Link className="button text-white" as={Link} to="/bookAppointment">Book Appointment</Nav.Link>
+                            <Nav.Link className="button text-white" as={Link} to="/">Hem</Nav.Link>
+                            <Nav.Link className="button text-white" as={Link} to="/adminbookings">Användarbokningar</Nav.Link>
+                            <Nav.Link className="button text-white" as={Link} to="/bookAppointment">Boka besök</Nav.Link>
                            
                         </Nav>
                     </Container>
@@ -61,7 +61,7 @@ function AdminNavigation() {
                                         }}
                                         onClick={handleLogOut}
                                     >
-                                        Logout
+                                        Logga Ut
                                     </button>
                                 </li>
                             </div>

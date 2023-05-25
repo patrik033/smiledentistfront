@@ -12,7 +12,6 @@ import Footer from "../Shared/Footer/Footer";
 
 function ResetPassword() {
 
-
     const {
         register,
         handleSubmit,
@@ -29,7 +28,6 @@ function ResetPassword() {
     let schema = yup.object().shape({
         email: yup.string().email("Not a valid email address").isValid(),
     });
-
 
     const onSubmit = (data) => {
         postData(data);
@@ -56,8 +54,6 @@ function ResetPassword() {
                 email: saveEmail.email
             }
 
-
-
             fetch(baseUrl, {
                 method: "POST",
                 body: JSON.stringify(data),
@@ -69,9 +65,6 @@ function ResetPassword() {
         }
     }, [saveEmail]);
 
-
-
-
     return (
         <div>
             <div>
@@ -82,7 +75,7 @@ function ResetPassword() {
                     <Form onSubmit={handleSubmit(onSubmit)}>
                         <Container>
                             <h2>
-                                Reset Password
+                                Återställ Lösenord
                             </h2>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
@@ -93,7 +86,7 @@ function ResetPassword() {
                                     </Col>
                                 </Row>
                                 <Form.Text className="text-muted">
-                                    We'll never share your email with anyone else.
+                                    Vi kommer aldrig dela din data
                                 </Form.Text>
                             </Form.Group>
                             <Row>

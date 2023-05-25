@@ -14,7 +14,7 @@ function FindUs() {
             <div style={{ marginTop: "5px", marginBottom: "5px" }}>
                 <section className="p-1 bg-dark">
                     <Container>
-                        <h2 className="text-center">Some</h2>
+                        <h2 className="text-center">Centrerad</h2>
                     </Container>
                 </section>
             </div>

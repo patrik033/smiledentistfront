@@ -10,12 +10,9 @@ import { Link } from "react-router-dom";
 function UserMenu() {
 
 
-
     return (
         <div>
             <AppBar className="bg-white" position="static">
-             
-
                     <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }} >
                         <Button>
                             <Nav.Link as={Link} to="/loggedinuser" className="text-dark text-decoration-none">
@@ -38,9 +35,7 @@ function UserMenu() {
                             </Nav.Link>
                         </Button>
                     </div>
-                
             </AppBar>
-
         </div>
     )
 }

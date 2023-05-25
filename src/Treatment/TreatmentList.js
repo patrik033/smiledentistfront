@@ -17,7 +17,7 @@ function TreatmentList() {
         <div>
             {!waiter &&
                 <div>
-                    <h1>Loading...<Spinner animation="border" /></h1>
+                    <h1>Laddar...<Spinner animation="border" /></h1>
                 </div>
             }
             {waiter &&

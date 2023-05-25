@@ -123,8 +123,8 @@ function UpdatePassword() {
 
                     }}>
                         <Alert className="mt-5" key="info" variant="info">
-                            Your Password has been updated
-                            <Alert.Link className="ms-3" href="/login">Use the link to navigate to the login page</Alert.Link>
+                            Lösenordet har uppdaterats
+                            <Alert.Link className="ms-3" href="/login">Använd länken för att logga in</Alert.Link>
                         </Alert>
                     </div>
                 </div>
@@ -133,8 +133,8 @@ function UpdatePassword() {
             {isPasswordExpired &&
                 <div>
                     <Alert className="mt-5" key="info" variant="info">
-                        Your Password link has expired
-                        <Alert.Link className="ms-3" href="/login">Use the link to generate a new from the login page</Alert.Link>
+                        Lösenordslänken har löpt ut
+                        <Alert.Link className="ms-3" href="/login">Använd länken för att skapa en ny från login sidan</Alert.Link>
                     </Alert>
                 </div>
             }

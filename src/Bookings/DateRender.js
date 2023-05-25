@@ -71,7 +71,7 @@ function DateRender() {
       .then((response) => {
         const test = response.data.map(e => {
           return {
-            title: " Booked",
+            title: " Bokad",
             start: new Date(e.scheduledTime),
             end: e.scheduledTime,
             id: uuid(),
@@ -112,7 +112,7 @@ function DateRender() {
 
     axios.get(betweenDates, {
       params: {
-        title: " Booked",
+        title: " Bokad",
         start: startTime,
         end: endTime
       },
@@ -120,7 +120,7 @@ function DateRender() {
       .then(function (response) {
         const test = response.data.map(e => {
           return {
-            title: " Booked",
+            title: " Bokad",
             start: e.start,
           }
         })
@@ -150,7 +150,7 @@ function DateRender() {
     setEvents([
       ...events,
       {
-        title: " Booked",
+        title: " Bokad",
         start,
         // end,
         id: token.id,

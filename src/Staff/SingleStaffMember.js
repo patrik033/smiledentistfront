@@ -23,7 +23,7 @@ function SingleStaffMember(props) {
         </p>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button onClick={props.onHide}>Stäng</Button>
       </Modal.Footer>
     </Modal>
   );

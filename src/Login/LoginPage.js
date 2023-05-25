@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import Button from 'react-bootstrap/Button';
+
 import Form from 'react-bootstrap/Form';
 import { Row, Col, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -75,30 +76,28 @@ function LoginPage() {
             const data = { email: user }
             const email = user;
 
-            console.log(user);
-            console.log(data);
             axios.post("https://localhost:6001/api/Auth/resend", data
             )
                 .then((response) => {
-                    const status = response.data.status;
+                    const status = response.data.statusCode;
                     if (status === 200) {
                         console.log("success");
                     }
                     else {
-                        console.log("Something weird happened");
-                    }})
+                        //console.log("Something weird happened");
+                    }
+                })
                 .catch((error) => {
-                    const status = error.data.status;
+                    const status = error.data.statusCode;
                     console.log(status);
                 })
         }
     }
 
-
     return (
         <div>
             <Form onSubmit={handleSubmit(onSubmit)}>
-                <Container>
+                <Container >
                     {customError &&
                         <div className='danger'>
                             <Alert variant={"danger"}>
@@ -109,9 +108,9 @@ function LoginPage() {
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Row className="align-items-center">
-                            <Col lg={4} md={4} sm="auto" xs="auto">
-                                <Form.Control {...register("userName", { required: "Email Address is required" })} aria-invalid={errors.mail} onChange={userName} type="email" placeholder="Enter email" />
-                                {errors.userName?.type === "pattern" && <p>Please don't use any special signs</p>}
+                            <Col sm={{ span: 8 }}>
+                                <Form.Control className='w-75' {...register("userName", { required: "Email Address is required" })} aria-invalid={errors.mail} onChange={userName} type="email" placeholder="Enter email" />
+                                {errors.userName?.type === "pattern" && <p>Använd inga specialtecken</p>}
 
                             </Col>
                         </Row>
@@ -123,32 +122,38 @@ function LoginPage() {
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Row className="align-items-center">
-                            <Col lg={4} md={4} sm="auto" xs="auto">
-                                <Form.Control {...register("password", { required: true, minLength: 8, maxLength: 50 })} onChange={userPassword} type="password" placeholder="Password" />
-                                {errors.password?.type === "required" && <p>This field is required</p>}
-                                {errors.password?.type === "minLength" && <p>This field requires minimum 8 characters</p>}
-                                {errors.password?.type === "maxLength" && <p>This field requires max 50 characters</p>}
+                            <Col sm={{ span: 8 }}>
+                                <Form.Control className='w-75' {...register("password", { required: true, minLength: 8, maxLength: 50 })} onChange={userPassword} type="password" placeholder="Password" />
+                                {errors.password?.type === "required" && <p>Det här fältet är obligatoriskt</p>}
+                                {errors.password?.type === "minLength" && <p>Det här fältet kräver minst 8 tecken</p>}
+                                {errors.password?.type === "maxLength" && <p>Det här fältet klarar max 50 tecken</p>}
 
                             </Col >
                         </Row>
+
                     </Form.Group>
 
-                    <Col className='mb-3' md={{ span: 1 }}>
-                        <Button variant="primary" type='submit'>
-                            Skicka
-                        </Button>
-                    </Col>
-                    <Col className='mb-3' md={{ span: 1 }}>
-                        <Button as={Link} to="/Register">Registrera?</Button>
-                    </Col>
 
-                    <Col className='mb-3' md={{ span: 1 }}>
-                        <Button as={Link} to="/resetpassword">Glömt ditt lösenord?</Button>
-                    </Col>
-
-                    <Col md={{ span: 3 }}>
-                        <Button onClick={resendVerification}>Skicka Ny Mail Verifiering</Button>
-                    </Col>
+                    <Row>
+                        <Col className='mb-2' sm={{ span: 8 }}>
+                            <Button className='w-75' variant="primary" minLength={{}} type='submit'>Skicka</Button>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className='mb-2' sm={{ span: 8 }}>
+                            <Button className='w-75' as={Link} to="/Register">Registrera?</Button>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className='mb-2' sm={{ span: 8 }}>
+                            <Button className='w-75' as={Link} to="/resetpassword">Glömt lösenord?</Button>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className='mb-2' sm={{ span: 8 }}>
+                            <Button className='w-75' onClick={resendVerification}>Skicka Ny Email Verifiering</Button>
+                        </Col>
+                    </Row>
                 </Container>
             </Form>
         </div>

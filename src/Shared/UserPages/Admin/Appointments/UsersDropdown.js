@@ -48,7 +48,7 @@ function UsersDropdown(props) {
                 <Row className="justify-content-md-left">
                     <Col md="auto">
                         <Form.Select onChange={updateValue} aria-label="Default select example">
-                            <option>Open this select menu</option>
+                            <option>Öppna menyn</option>
                             {users.map((someuser,i) => 
                                 <option key={i} value={JSON.stringify(someuser)}>
                                     {someuser.userName}

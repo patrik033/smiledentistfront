@@ -84,7 +84,7 @@ function UserEmail(props) {
                                     <Form.Label>Old Email</Form.Label>
                                     <Form.Control type="email" disabled value={user.email} />
                                     <Form.Text className="text-muted">
-                                        We'll never share your data with anyone else.
+                                        Vi delar inte din data
                                     </Form.Text>
                                 </Form.Group>
 

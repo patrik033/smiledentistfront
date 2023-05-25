@@ -17,13 +17,13 @@ function Footer() {
                 <Container>
                     <Row>
                         <Column>
-                            <Heading>About Us</Heading>
+                            <Heading>Om oss</Heading>
                             <Row>
                                 <FooterLink href="/treatment">Behandlingar</FooterLink>
                             </Row>
                         </Column>
                         <Column>
-                            <Heading>Staff</Heading>
+                            <Heading>Personal</Heading>
                             <Row>
                                 <FooterLink className="me-3" href="/staff">Personal</FooterLink>
                             </Row>

@@ -93,7 +93,7 @@ function UserName() {
                                 <Form.Label>Gammalt Namn</Form.Label>
                                 <Form.Control type="text" disabled value={user.fullName} />
                                 <Form.Text className="text-muted">
-                                    We'll never share your data with anyone else.
+                                    Vi delar inte din data
                                 </Form.Text>
                             </Form.Group>
 

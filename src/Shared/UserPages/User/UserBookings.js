@@ -62,11 +62,11 @@ function UserBookings(props) {
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Name</th>
+                            <th>Namn</th>
                             <th>Email</th>
-                            <th>User Id</th>
-                            <th>Scheduled Time</th>
-                            <th>Delete Order</th>
+                            <th>Användar Id</th>
+                            <th>Bokad Tid</th>
+                            <th>Ta Bort Bokning</th>
                         </tr>
                     </thead>
                     <tbody>

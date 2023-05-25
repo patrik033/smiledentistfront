@@ -17,7 +17,7 @@ function Testimonials() {
     if (waiter === false) {
         return (
             <div>
-                <h1>Loading...<Spinner animation="border" /></h1>
+                <h1>Laddar...<Spinner animation="border" /></h1>
             </div>
         );
     }

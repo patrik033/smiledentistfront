@@ -37,18 +37,14 @@ function Home() {
         </Row>
       </Container>
       <Container fluid>
-
         <Row>
           <Testimonials />
         </Row>
       </Container>
       <Container fluid>
-       
-
           <Row>
             <FindUs />
           </Row>
-     
       </Container>
       {/* <Footer /> */}
     </div>

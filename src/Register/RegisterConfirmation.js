@@ -37,7 +37,6 @@ function RegisterConfirmation() {
 
     useEffect(() => {
         if (isBothSet) {
-
             axios.get(`https://localhost:6001/api/Auth?email=${email}&activationToken=${token}`)
                 .then(response => {
                     // console.log(response)
@@ -87,14 +86,14 @@ function RegisterConfirmation() {
                     justifyContent: "center",
 
                 }} className="mt-5">
-                    Waiting for confirmation  <Spinner className="ms-3" animation="border" />
+                    Väntar på bekräftelse  <Spinner className="ms-3" animation="border" />
                 </div>
             }
             {isExpired &&
                 <div>
                     <Alert className="mt-5" key="info" variant="info">
-                        Your confirmation link has expired
-                        <Alert.Link className="ms-3" href="/login">Use the link to navigate to the login page for a refresh link</Alert.Link>
+                       Bekräftelse länken är inte längre giltig
+                        <Alert.Link className="ms-3" href="/login">Använd länken för att gå till inloggnings sidan för att förnya länken</Alert.Link>
                     </Alert>
                 </div>
             }

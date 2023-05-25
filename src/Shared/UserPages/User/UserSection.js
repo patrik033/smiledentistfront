@@ -66,7 +66,7 @@ function UserSection(props) {
 
             <Row>
                 <Col className="me-3">
-                    <h2>Dina Bokade Tider:</h2>
+                    <h2>Bokade Tider:</h2>
                     <UserBookings user={props} />
                 </Col>
 

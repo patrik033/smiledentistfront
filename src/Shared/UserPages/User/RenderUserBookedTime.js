@@ -63,7 +63,7 @@ function RenderUserBookedTime(props) {
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="contained-modal-title-vcenter">
-                        Are you sure you want to delete:
+                        Är du säker på att du vill ta bort?:
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -73,8 +73,8 @@ function RenderUserBookedTime(props) {
                     <h4>Booked Time: {props.data.scheduledTime}</h4>
                 </Modal.Body>
                 <Modal.Footer style={{ display: "flex", justifyContent: "left" }}>
-                    <Button className="me-2 ml-auto " size="lg" variant="danger" onClick={deleteBookedTime}>Yes</Button>
-                    <Button size="lg" variant="secondary" onClick={props.onHide}>No</Button>
+                    <Button className="me-2 ml-auto " size="lg" variant="danger" onClick={deleteBookedTime}>Ja</Button>
+                    <Button size="lg" variant="secondary" onClick={props.onHide}>Nej</Button>
                 </Modal.Footer>
             </Modal>
         </div>

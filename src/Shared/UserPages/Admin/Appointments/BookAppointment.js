@@ -29,7 +29,7 @@ function BookAppointment() {
                 <div>
                     <Container fluid>
                         <Alert className="mt-4 ms-auto" variant="danger">
-                            Please select a user
+                            Välj användare från listan
                         </Alert>
                     </Container>
                 </div>

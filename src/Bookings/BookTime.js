@@ -113,9 +113,9 @@ function BookTime(props) {
               </InputGroup>
             </Modal.Body>
             <Modal.Footer>
-              <Button onClick={props.onHide}>Close</Button>
+              <Button onClick={props.onHide}>Stäng</Button>
               <Button variant="primary" onClick={sendDataToApi}>
-                Save Changes
+                Spara Ändringar
               </Button>
             </Modal.Footer>
           </Modal>

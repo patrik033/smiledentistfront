@@ -12,7 +12,6 @@ import 'bootstrap-icons/font/bootstrap-icons.css'; // needs additional webpack c
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import BookTimeAdmin from './BookTimeAdmin';
-import { Button } from 'react-bootstrap';
 import jwt_decode from "jwt-decode";
 
 
@@ -69,11 +68,19 @@ function AdminAppointmentBooker(props) {
             .then((response) => {
                 const test = response.data.map(e => {
                     return {
+                        title: " Bokad",
                         start: new Date(e.scheduledTime),
                         end: e.scheduledTime,
                         id: uuid(),
                     }
                 });
+                test.push({
+                    title: " Lunch",
+                    daysOfWeek: ['1', '2', '3', '4', '5'], // these recurrent events move separately
+                    startTime: '11:00:00',
+                    endTime: '12:00:00',
+                    id: uuid()
+                  })
                 setEvents(test)
 
             })
@@ -148,9 +155,9 @@ function AdminAppointmentBooker(props) {
 
     return (
         <div className="mt-2">
-            <Button className='mb-2' variant="primary" onClick={() => setModalShow(true)} >
+            {/* <Button className='mb-2' variant="primary" onClick={() => setModalShow(true)} >
                 Click
-            </Button>
+            </Button> */}
             {loadData &&
                 <FullCalendar
                     plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, bootstrap5Plugin]}

@@ -6,9 +6,11 @@ function Login() {
     return (
         <div>
             <Navigation />
-            <h1>Hello from Login</h1>
             <Container>
-                <LoginPage/>
+                <h1>Logga In</h1>
+            </Container>
+            <Container>
+                <LoginPage />
             </Container>
             <Footer />
         </div>

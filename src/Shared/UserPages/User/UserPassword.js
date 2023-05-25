@@ -118,7 +118,7 @@ function UserPassword() {
 
                                 </Form.Control>
                                 <Form.Text className="text-muted">
-                                    We'll never share your data with anyone else.
+                                    Vi delar inte din data
                                 </Form.Text>
 
                             </Form.Group>

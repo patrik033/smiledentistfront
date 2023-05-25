@@ -77,7 +77,7 @@ function SingleStaff(props) {
                             <FavoriteIcon />
                         </IconButton>
 
-                        <Buttons onClick={() => setModalShow(true)} size="small">More Information</Buttons>
+                        <Buttons onClick={() => setModalShow(true)} size="small">Mera Information</Buttons>
                         <SingleStaffMember
                             show={modalShow}
                             onHide={() => setModalShow(false)}

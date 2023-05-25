@@ -23,7 +23,7 @@ function LogedInUser(props) {
             {isLoggedIn &&
                 <div>
                     <span>
-                    <Nav.Link className="button text-white" as={Link} to="/loggedinuser">Welcome {token.email}</Nav.Link>
+                    <Nav.Link className="button text-white" as={Link} to="/loggedinuser">Välkommen {token.email}</Nav.Link>
                     </span>
                 </div>
             }

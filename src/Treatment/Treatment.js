@@ -6,9 +6,11 @@ function Treatment() {
     return (
         <div>
             <Navigation />
-            <h1>
-                Välkommen till behandlingar
-            </h1>
+            <Container>
+                <h1>
+                    Behandlingar
+                </h1>
+            </Container>
             <Container>
                 <TreatmentList />
             </Container>

@@ -23,8 +23,8 @@ function Register() {
         formState: { errors }
     } = useForm();
     const onSubmit = (data) => {
-
-        alert(JSON.stringify(data));
+ 
+        //alert(JSON.stringify(data));
         postData(data);
     }
 
@@ -43,7 +43,6 @@ function Register() {
                 }
             })
     }
-
 
     const formSchema = Yup.object().shape({
         password: Yup.string()
@@ -70,41 +69,38 @@ function Register() {
                             <Row className="align-items-center">
                                 <Col lg={4} md={4} sm="auto" xs="auto">
                                     <Form.Control {...register("name", { required: true, minLength: 3, maxLength: 50 })} type="text" placeholder="First Name" />
-                                    {errors.name?.type === "required" && <p>This field is required</p>}
-                                    {errors.name?.type === "minLength" && <p>This field must be longer than 3 characters</p>}
-                                    {errors.name?.type === "maxLength" && <p>This fild must be shorter than 50 characters</p>}
+                                    {errors.name?.type === "required" && <p>Det här fältet är obligatoriskt</p>}
+                                    {errors.name?.type === "minLength" && <p>Det här fältet måste vara längre än 3 tecken</p>}
+                                    {errors.name?.type === "maxLength" && <p>Det här fältet måste vara kortare än 50 tecken</p>}
                                 </Col >
                             </Row>
                         </Form.Group>
-
-
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Row className="align-items-center">
                                 <Col lg={4} md={4} sm="auto" xs="auto">
                                     <Form.Control {...register("userName", { required: "Email Address is required" })} aria-invalid={errors.mail} type="email" placeholder="Enter email" />
-
                                 </Col>
                             </Row>
                             <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
+                                Vi kommer aldrig dela din data
                             </Form.Text>
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label>Lösenord</Form.Label>
                             <Row className="align-items-center">
                                 <Col lg={4} md={4} sm="auto" xs="auto">
                                     <Form.Control {...register("password", { required: true, minLength: 8 })} type="password" placeholder="Password"
                                         className={`form-control ${errors.password ? "is-invalid" : ""}`} />
                                     <div className="invalid-feedback">{errors.password?.message}</div>
-                                    {errors.password?.type === "required" && <p>This field is required</p>}
-                                    {errors.password?.type === "minLength" && <p>This field must be longer than 8 characters</p>}
+                                    {errors.password?.type === "required" && <p>Det här fältet är obligatoriskt</p>}
+                                    {errors.password?.type === "minLength" && <p>Det här fältet måste vara längre än 8 tecken</p>}
                                 </Col >
                             </Row>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Repeat Password</Form.Label>
+                            <Form.Label>Upprepa Lösenord</Form.Label>
                             <Row className="align-items-center">
                                 <Col lg={4} md={4} sm="auto" xs="auto">
                                     <Form.Control name="confirmPassword" {...register("confirmPassword", {
@@ -115,8 +111,8 @@ function Register() {
                                     })}
                                         className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`}
                                         type="password" placeholder="Repeat Password" />
-                                    {errors.confirmPassword?.type === "required" && <p>This field is required</p>}
-                                    {errors.confirmPassword?.type === "minLength" && <p>This field must be longer than 8 characters</p>}
+                                    {errors.confirmPassword?.type === "required" && <p>Det här fältet är obligatoriskt</p>}
+                                    {errors.confirmPassword?.type === "minLength" && <p>Det här fältet måste vara längre än 8 tecken</p>}
                                     <div className="invalid-feedback">{errors.repeatPassword?.message}</div>
                                 </Col >
                             </Row>
@@ -125,11 +121,8 @@ function Register() {
                             <Col className='mb-3' md={{ span: 2 }}>
                                 <Input variant="primary" type="submit" />
                             </Col>
-
                         </Row>
-
                     </Container>
-
                 </Form>
             </Container>
             <Footer />

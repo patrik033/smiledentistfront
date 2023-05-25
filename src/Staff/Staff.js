@@ -7,7 +7,9 @@ function Staff() {
     return (
         <div>
             <Navigation />
-            <h1>Välkommen till personal</h1>
+            <Container>
+                <h1>Personal</h1>
+            </Container>
             <Container>
                 <StaffList />
             </Container>

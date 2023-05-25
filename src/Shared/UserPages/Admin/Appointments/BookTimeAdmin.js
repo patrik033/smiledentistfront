@@ -10,7 +10,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 function BookTimeAdmin(props) {
 
-    console.log(props.userData)
+    // console.log(props.userData)
     const baseUrl = "https://localhost:6001/api/Schedulerer/";
     const [dataPost, setData] = useState(false);
     const [sendData, setSendData] = useState(false);
@@ -101,7 +101,7 @@ function BookTimeAdmin(props) {
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <h4>Är du säker att du vill boka besöket?:</h4>
+                        <h4>vill du verkligen boka besöket?:</h4>
                         <h4>Datum:
                         </h4>
                         <h5>
@@ -122,9 +122,9 @@ function BookTimeAdmin(props) {
 
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button onClick={props.onHide}>Close</Button>
+                        <Button onClick={props.onHide}>Stäng</Button>
                         <Button variant="primary" onClick={sendDataToApi}>
-                            Save Changes
+                            Spara Ändringar
                         </Button>
                     </Modal.Footer>
                 </Modal>
